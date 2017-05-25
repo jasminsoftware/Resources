@@ -1,5 +1,5 @@
-## The Flow implicit grant ##
-The implicit grant type is used for apps and web applications where the client secret confidentiality is not guaranteed. 
+## JASMIN Authentication - Implicit flow grant ##
+The implicit grant type is used for applications and web applications where the client secret confidentiality is not guaranteed.
 
 The client will redirect the user to the authorization server with the following parameters:
 - response_type -> the value token
