@@ -6,7 +6,7 @@ To perform this type of authentication, you must first register your application
 
 After obtaining the Client ID, the client must redirect the user to the authorization server submiting the following parameters:
 - response_type: the response type; the value should be "token".
-- client_id: the client identifier obtaining after the registration.
+- client_id: the client identifier obtained after the registration.
 - redirect_uri: the redirect URI after login success. This parameter must match the registered redirect URI.
 - scope: list of scopes
 
