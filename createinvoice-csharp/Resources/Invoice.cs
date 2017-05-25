@@ -5,15 +5,15 @@ using Newtonsoft.Json;
 namespace Jasmin.InvoiceSample
 {
     /// <summary>
-    /// The object with all the information of an order.
+    /// The object with all the information of an invoice.
     /// </summary>
     public class Invoice
     {
         /// <summary>
-        /// Gets or sets the order identifier.
+        /// Gets or sets the invoice identifier.
         /// </summary>
         /// <value>
-        /// The order identifier.
+        /// The invoice identifier.
         /// </value>
         [JsonProperty("id")]
         public Guid? InvoiceId { get; set; }
@@ -46,19 +46,19 @@ namespace Jasmin.InvoiceSample
         public double? Discount { get; set; }
 
         /// <summary>
-        /// Gets or sets the order payable amount.
+        /// Gets or sets the invoice payable amount.
         /// </summary>
         /// <value>
-        /// The order payable amount.
+        /// The invoice payable amount.
         /// </value>
         [JsonProperty("payableAmount")]
         public Money PayableAmount { get; set; }
 
         /// <summary>
-        /// Gets or sets the order date.
+        /// Gets or sets the invoice date.
         /// </summary>
         /// <value>
-        /// The order date.
+        /// The invoice date.
         /// </value>
         [JsonProperty("documentDate")]
         public DateTime? DocumentDate { get; set; }
