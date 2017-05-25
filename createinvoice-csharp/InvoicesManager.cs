@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 namespace Jasmin.InvoiceSample
 {
     /// <summary>
-    /// The Jasmin invoice manager. Implements the jasmin invoice handling.
+    /// This class shows how to call the JASMIN API to create a new Billing | Invoice entity in a given subscription.
     /// </summary>
     public static class InvoicesManager
     {
