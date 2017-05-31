@@ -1,4 +1,4 @@
-## JASMIN Code Samples
+## Jasmin Code Samples
 
 This repository contains code samples which demonstrate how you can integrate with JASMIN.
 
