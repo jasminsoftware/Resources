@@ -3,3 +3,11 @@
 ################################################################################
 
 /code-samples/csharp-createcustomer-sample/.vs
+/.vs
+/code-samples/csharp-createcustomer-sample/csharp-createcustomer-sample/bin/Debug
+/code-samples/csharp-createcustomer-sample/csharp-createcustomer-sample/obj
+/code-samples/csharp-createcustomer-sample/packages/Newtonsoft.Json.10.0.3
+/code-samples/csharp-createinvoice-sample/.vs
+/code-samples/csharp-createinvoice-sample/packages/Newtonsoft.Json.10.0.3
+/code-samples/csharp-listorders-sample/.vs
+/code-samples/csharp-listorders-sample/packages/Newtonsoft.Json.10.0.3
