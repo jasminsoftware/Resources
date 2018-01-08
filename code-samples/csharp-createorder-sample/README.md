@@ -1,3 +1,3 @@
-### Jasmin Code Sample - Create Order - C#
+### Jasmin Code Sample - Update Sales Item - C#
 
-This code sample illustrates the use of the Jasmin Web API to create a new sales order.
+This code sample illustrates the use of the Jasmin Web API to update a sales item.
