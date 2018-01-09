@@ -20,11 +20,11 @@ namespace UpdateSalesItem
 
         private const string ApiBaseAddress = "https://my.jasminsoftware.com/api";
 
-        private const string AccountKey = "10001"; // TODO: put your account key here
-        private const string SubscriptionKey = "10001-0002"; // TODO: put your account key here
+        private const string AccountKey = "xxxxx"; // TODO: put your account key here
+        private const string SubscriptionKey = "xxxxx-xxxx"; // TODO: put your account key here
 
-        private const string AccessToken = "ew0KICAidHlwIjogIkpXVCIsDQogICJhbGciOiAiUlMyNTYiLA0KICAieDV0IjogImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSIsDQogICJraWQiOiAiYTNyTVVnTUZ2OXRQY2xMYTZ5RjN6QWtmcXVFIg0KfQ.ew0KICAiaXNzIjogImh0dHBzOi8vaWRlbnRpdHkucHJpbWF2ZXJhYnNzLmNvbS9jb3JlIiwNCiAgImF1ZCI6ICJodHRwczovL2lkZW50aXR5LnByaW1hdmVyYWJzcy5jb20vY29yZS9yZXNvdXJjZXMiLA0KICAiZXhwIjogMTUxNTQ0MjYyMiwNCiAgIm5iZiI6IDE1MTU0MzE4MjIsDQogICJjbGllbnRfaWQiOiAiamFzbWluIiwNCiAgInNjb3BlIjogWw0KICAgICJhcHBsaWNhdGlvbiIsDQogICAgIm9wZW5pZCIsDQogICAgIm12YyINCiAgXSwNCiAgInN1YiI6ICI4YzgzYzRkNC0wYzI4LTQ3OGItOGQ3Yy05NzBhN2Y4N2JhMWIiLA0KICAiYXV0aF90aW1lIjogMTUxNTQzMTgyMiwNCiAgImlkcCI6ICJpZHNydiIsDQogICJwcmVmZXJyZWRfdXNlcm5hbWUiOiAic29maWEucmliZWlyb0BwcmltYXZlcmFic3MuY29tIiwNCiAgImVtYWlsIjogInNvZmlhLnJpYmVpcm9AcHJpbWF2ZXJhYnNzLmNvbSIsDQogICJlbWFpbF92ZXJpZmllZCI6ICJ0cnVlIiwNCiAgIm5hbWUiOiAic29maWEucmliZWlyb0BwcmltYXZlcmFic3MuY29tIiwNCiAgImdpdmVuX25hbWUiOiAiYWRtaW4iLA0KICAiZmFtaWx5X25hbWUiOiAiIiwNCiAgInBpY3R1cmUiOiAiIiwNCiAgImN1bHR1cmUiOiAiZW4tVVMiLA0KICAidXNlcm5hbWUiOiAic29maWEucmliZWlyb0BwcmltYXZlcmFic3MuY29tIiwNCiAgImRpc3BsYXlfbmFtZSI6ICJhZG1pbiIsDQogICJqdGkiOiAiMzMxNWJiNWNkMWZiNTIwNmY1MGQ3NmI2ODQzMzI1OTgiLA0KICAiYW1yIjogWw0KICAgICJwYXNzd29yZCINCiAgXQ0KfQ.UqqMexjhLTRzDx7RevQp8KdeFXgABMcx7XBYcUrduW__gAtT0t7_xaf_9o2uglxWvaQoUKbdTrPOVQZEDnVxnp1LB-x358KjUyLewH46aq_BHwM_ULaClZyiGP5oEGBlXJNHmfpxxezPCAxJlPS9GuA_nvIo-eQlJZ4jn_joZV6eFUwYl2RKwi8aPWsKBPA0_gQEzMdDTuv6bddyTcK5xuihoBLWlUhOpKTnr9h_enR842R7wrKFVRNSjFifxfFiAYu8fdIZqeDhSFWu6ME7ypEtyDcmEvV7T5W9lUQWMCI1tLXWFRUMG6poqkl32rewK-Sd49LVlgUV-Yk6LaXwXA"; // TODO: put the authorization access token here (this should be obtained previously)
-        private const string ItemKey = "P3037"; //TODO: Put the Item Key here
+        private const string AccessToken = "xxxxxxxxxxxxxxxxx"; // TODO: put the authorization access token here (this should be obtained previously)
+        private const string ItemKey = "xxxx"; //TODO: Put the Item Key here
 
         #endregion
 
