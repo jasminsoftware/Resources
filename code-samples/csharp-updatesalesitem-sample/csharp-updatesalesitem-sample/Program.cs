@@ -23,7 +23,7 @@ namespace UpdateSalesItem
         private const string AccountKey = "xxxxx"; // TODO: put your account key here
         private const string SubscriptionKey = "xxxxx-xxxx"; // TODO: put your account key here
 
-        private const string AccessToken = "xxxxxxxxxxxxxxxxx"; // TODO: put the authorization access token here (this should be obtained previously)
+        private const string AccessToken = "xxxxxxxxxxxxxxxx"; // TODO: put the authorization access token here (this should be obtained previously)
         private const string ItemKey = "xxxx"; //TODO: Put the Item Key here
 
         #endregion

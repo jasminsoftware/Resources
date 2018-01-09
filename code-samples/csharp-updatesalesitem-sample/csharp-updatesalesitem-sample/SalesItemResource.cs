@@ -22,25 +22,6 @@ namespace UpdateSalesItem
 
         public Collection<PriceListLineResource> PriceListLines { get; set; }
 
-        /*
-                public string sqas
-                {
-                    get;
-                    set;
-                }
-
-                public int SeriesNumber
-                {
-                    get;
-                    set;
-                }
-
-                public string Company
-                {
-                    get;
-                    set;
-                }
-                */
         #endregion
     }
 }
