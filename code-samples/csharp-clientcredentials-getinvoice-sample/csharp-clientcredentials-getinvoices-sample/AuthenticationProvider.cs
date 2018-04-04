@@ -56,7 +56,7 @@ namespace GetInvoices
 
         public async Task SetAccessTokenAsync(HttpClient client)
         {
-            if (string.IsNullOrEmpty(this.accessToken) || this.tokenExpirationDate >= DateTime.Now)   
+            if (string.IsNullOrEmpty(this.accessToken) || this.tokenExpirationDate <= DateTime.Now)   
             {
                 await this.RequestAccessTokenAsync();
             }
