@@ -15,3 +15,4 @@ The following code samples are available to help you jump start the development 
 ### Javascript Samples
 
 - [**js-oauthimplicit-sample**](js-oauthimplicit-sample): how to handle the OAuth implicit authorization flow.
+- [**js-nodejs-oauthclientcredentials-sample**](js-nodejs-oauthclientcredentials-sample): how to handle the OAuth client credential authorization flow.
