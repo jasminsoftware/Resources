@@ -23,13 +23,13 @@
 					"urlencoded": [
 						{
 							"key": "client_secret",
-							"value": "CLIENT_SECRET",
+							"value": "{{client_secret}}",
 							"description": "put your application client secret here",
 							"type": "text"
 						},
 						{
 							"key": "client_id",
-							"value": "CLIENT_ID",
+							"value": "{{client_id}}",
 							"description": "put your application client id here",
 							"type": "text"
 						},
@@ -73,7 +73,7 @@
 					"oauth2": [
 						{
 							"key": "accessToken",
-							"value": "",
+							"value": "ew0KICAidHlwIjogIkpXVCIsDQogICJhbGciOiAiUlMyNTYiLA0KICAieDV0IjogImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSIsDQogICJraWQiOiAiYTNyTVVnTUZ2OXRQY2xMYTZ5RjN6QWtmcXVFIg0KfQ.ew0KICAiaXNzIjogImh0dHBzOi8vaWRlbnRpdHkucHJpbWF2ZXJhYnNzLmNvbS9jb3JlIiwNCiAgImF1ZCI6ICJodHRwczovL2lkZW50aXR5LnByaW1hdmVyYWJzcy5jb20vY29yZS9yZXNvdXJjZXMiLA0KICAiZXhwIjogMTUyMzI5NjM4OCwNCiAgIm5iZiI6IDE1MjMyODU1ODgsDQogICJjbGllbnRfaWQiOiAic3VwZXJBcHAxIiwNCiAgImNsaWVudF9iYWNrZ3JvdW5kLXVybCI6ICJodHRwOi8vbXkuYXBwbGljYXRpb24uY29tL2ltYWdlcy9iYWNrZ3JvdW5kLnBuZyIsDQogICJzY29wZSI6ICJhcHBsaWNhdGlvbiIsDQogICJqdGkiOiAiYTEzYzhkMGIyOWYwNDdmYTA2ZGZkZTZhNWQxNDdkNzMiDQp9.R3zTFF3lKDcbtoToXiGxF_97Gx1yqi1K8eYP-qsQpyDcdLOyuYit4fbtkTbxzYDg_jNbwtjUehNxhoujST3cWX9GclsCwsadOYpiq_zppdJsfWi8gGyU9hQnkIyktdg1uFdSVL6ndweQfd85efxt57LKb4DYlD_dFcqc-pdc1o6fSNqJ3C6Ok7A_az3X3pJ-ZOnQT0v4AsfrD6afslb3UhFtcx67f2GPJ__lzVLjwX-tuBDSg2TbMva0rCEXGwpsJFV-5WcsWv3YxUQF5dOPHtJUlrlJex4dnv3qPwGyQW9R-ll-SgtC4NfzQvQJSMWR-oFmsPKW3Y5ATyGljusOIA",
 							"type": "string"
 						},
 						{
