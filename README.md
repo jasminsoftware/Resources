@@ -25,3 +25,4 @@ You can find more information at [developers.jasminsoftware.com](http://develope
 This repository includes the following resources:
 
 - [**Code Samples**](code-samples): a set of code samples for various programming languages that illustrate the use of the Jasmin Web API.
+- [**Postman Samples**](postman-samples): a set of postman samples with some useful samples of how to use the Jasmin Web API.
