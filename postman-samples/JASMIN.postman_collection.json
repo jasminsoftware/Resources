@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "1aaceb96-99c6-4558-94f6-a9f94274a424",
+		"name": "JASMIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "JASMIN : Get Access Token (Client Credentials)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_secret",
+							"value": "CLIENT_SECRET",
+							"description": "put your application client secret here",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "CLIENT_ID",
+							"description": "put your application client id here",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "application",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://identity.primaverabss.com/core/connect/token",
+					"protocol": "https",
+					"host": [
+						"identity",
+						"primaverabss",
+						"com"
+					],
+					"path": [
+						"core",
+						"connect",
+						"token"
+					]
+				},
+				"description": "Get Access Token using Client Credentials flow"
+			},
+			"response": []
+		},
+		{
+			"name": "JASMIN : Get Invoices (Client Credentias via Postman Authorization)",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://my.jasminsoftware.com/api/{{accountKey}}/{{subscriptionKey}}/billing/invoices",
+					"protocol": "https",
+					"host": [
+						"my",
+						"jasminsoftware",
+						"com"
+					],
+					"path": [
+						"api",
+						"{{accountKey}}",
+						"{{subscriptionKey}}",
+						"billing",
+						"invoices"
+					]
+				},
+				"description": "Get Access Token using Client Credentials flow"
+			},
+			"response": []
+		}
+	]
+}
