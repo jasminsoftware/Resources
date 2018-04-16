@@ -1,0 +1,36 @@
+.card {
+    min-height: 450px!important;
+    max-height: 450px!important;
+    height: 450px!important;
+    min-width: 250px!important;
+    max-width: 250px!important;
+    width: 250px!important;
+    margin:10px; 
+    border: 1px solid rgb(32, 105, 189, .5);
+}
+
+.card-block {
+    position: relative;
+    padding: 1em;
+    border: none;
+    border: 1px solid rgb(32, 105, 189, .1);
+}
+
+.card-img-top {
+    height: 60%!important;
+    background-color: rgb(32, 105, 189)!important;
+}
+
+.card-text {
+    height: 55px!important;
+}
+
+.card-footer {
+    background-color:  rgb(32, 105, 189)!important;
+    border: 1px solid rgb(32, 105, 189) !important;  
+    color: white; 
+}
+
+.img-error{
+    padding:75px;
+}

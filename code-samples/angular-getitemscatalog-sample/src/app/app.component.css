@@ -1,0 +1,30 @@
+.flat{
+    border-radius: 0!important;
+    margin:-1px;
+}
+
+.stretch{
+    min-height:100%;
+}
+
+.item{
+    width:50%;
+    margin: auto;
+    margin-bottom:2px;
+}
+
+.center-buttons{
+    display: table;
+    margin: 0 auto;
+}
+
+.mybtn{
+    width:120px;
+    margin-left: 2px;
+}
+
+.item-header{
+    color: #2E2E2E;
+    border:0;
+    font-weight: bold;
+}

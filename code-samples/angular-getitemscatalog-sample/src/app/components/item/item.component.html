@@ -1,0 +1,16 @@
+<div class="item-container">
+  <div class="card">
+    <img class="card-img-top" src="{{this.itemData.image}}" onerror="this.onerror=null;this.className='card-img-top img-error';this.src='https://cdn.iconscout.com/public/images/icon/premium/png-512/high-priority-32b5a7ca4d02bd8f-512x512.png'">
+    <div class="card-block">
+      <h4 class="card-title">{{this.itemData.itemKey}}</h4>
+      <div class="card-text">
+        {{this.itemData.description}}
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="float-right">1 {{this.itemData.unit}}</span>
+      <span>
+        <i class=""></i>{{this.itemData.priceListLines[0].priceAmount.amount}} {{this.itemData.priceListLines[0].priceAmount.symbol}}</span>
+    </div>
+  </div>
+</div>
