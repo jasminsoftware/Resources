@@ -11,6 +11,7 @@ The following code samples are available to help you jump start the development 
 - [**csharp-listorders-sample**](csharp-listorders-sample): list the sales orders available using the Web API.
 - [**csharp-odata-sample**](csharp-odata-sample): list all sales orders attributes defined in OData search.
 - [**csharp-clientcredentials-getinvoice-sample**](csharp-clientcredentials-getinvoice-sample): list the sales invoices available using Client Credentials OAuth flow.
+- [**csharp-itemextensions-sample**](csharp-itemextensions-sample): create an item and add a sales item extension using the Web API.
 
 ### Javascript Samples
 
