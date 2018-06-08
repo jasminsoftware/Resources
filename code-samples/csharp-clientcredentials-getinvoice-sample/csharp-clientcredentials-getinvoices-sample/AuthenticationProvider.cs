@@ -39,11 +39,7 @@ namespace GetInvoices
                 if (this.tokenClient == null)
                 {
                     string getTokenAddress = string.Format(CultureInfo.InvariantCulture, "{0}/{1}", Constants.Identity.BaseUriKey, Constants.Identity.TokenUriKey);
-
-                    this.tokenClient = new TokenClient(getTokenAddress, this.clientId, this.clientSecret)
-                    {
-                        BasicAuthenticationHeaderStyle = TokenClient.AuthenticationHeaderStyle.Rfc2617
-                    };
+                    this.tokenClient = new TokenClient(getTokenAddress, this.clientId, this.clientSecret, style: AuthenticationStyle.PostValues);
                 }
 
                 return this.tokenClient;

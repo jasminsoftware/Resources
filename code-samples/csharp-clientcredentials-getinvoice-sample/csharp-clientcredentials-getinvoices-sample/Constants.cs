@@ -5,7 +5,7 @@
         internal static class Identity
         {
             internal const string BaseUriKey = "https://identity.primaverabss.com";
-            internal const string TokenUriKey = "core/connect/token";
+            internal const string TokenUriKey = "connect/token";
             internal const string ApplicationScopes = "application"; // default scopes
         }
 
