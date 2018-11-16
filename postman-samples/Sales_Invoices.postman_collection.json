@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "73bef884-a5e7-de36-8371-57e546e27614",
+		"name": "Sales_Invoices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Invoices",
+			"item": [
+				{
+					"name": "List All Invoices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"billing",
+								"invoices",
+								""
+							]
+						},
+						"description": "Obter a lista de faturas (billing)"
+					},
+					"response": []
+				},
+				{
+					"name": "List Invoice by key",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/PRI/FA/2018/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"billing",
+								"invoices",
+								"PRI",
+								"FA",
+								"2018",
+								"2"
+							]
+						},
+						"description": "Obter os dados de uma fatura pela key"
+					},
+					"response": []
+				},
+				{
+					"name": "salesCore invoiceTypes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/invoiceTypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salesCore",
+								"invoiceTypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invoice by id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/814acd42-83e3-e811-a140-0003ff55bd4b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"billing",
+								"invoices",
+								"814acd42-83e3-e811-a140-0003ff55bd4b"
+							]
+						},
+						"description": "Obter os dados de uma fatura pela key"
+					},
+					"response": []
+				},
+				{
+					"name": "Invoice note",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"Vamos Jantar\""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/PRI/FA/2018/1/noteToRecipient",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"billing",
+								"invoices",
+								"PRI",
+								"FA",
+								"2018",
+								"1",
+								"noteToRecipient"
+							]
+						},
+						"description": "Obter os dados de uma fatura pela key"
+					},
+					"response": []
+				},
+				{
+					"name": "Billing - DELETE Invoices",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/b810ce21-09e6-4990-9e7e-7790848c6705",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"billing",
+								"invoices",
+								"b810ce21-09e6-4990-9e7e-7790848c6705"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Min - Invoice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"buyerCustomerParty\": \"INDIF\",\r\n\t\t\"documentLines\": [\r\n\t{\r\n\t\t\"salesItem\": \"ART01\",\r\n\t\t\"unitPrice\": {\r\n          \"amount\": 0.4187\r\n        }\r\n\t},\r\n\t{\r\n\t\t\"salesItem\": \"ART01\",\r\n\t\t\"unitPrice\": {\r\n          \"amount\": 100\r\n        }\r\n\t}\r\n\t]\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"billing",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create invoice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"documentType\": \"FA\",\n    \"serie\": \"2018\",\n    \"seriesNumber\": 1,\n    \"company\": \"Default\",\n    \"paymentTerm\": \"01\",\n    \"paymentMethod\": \"NUM\",\n    \"currency\": \"EUR\",\n    \"documentDate\": \"2018-12-18T00:00:00\",\n    \"postingDate\": \"2018-12-18T00:00:00\",\n    \"buyerCustomerParty\": \"SOFRIO\",\n    \"buyerCustomerPartyName\": \"Sofrio, Lda\",\n    \"accountingPartyName\": \"Sofrio, Lda.\",\n    \"accountingPartyTaxId\": \"593362462\",\n    \"exchangeRate\": 1,\n    \"discount\": 0,\n    \"loadingCountry\": \"PT\",\n    \"unloadingCountry\": \"PT\",\n    \"isExternal\": false,\n    \"isManual\": false,\n    \"isSimpleInvoice\": false,\n    \"isWsCommunicable\": false,\n    \"deliveryTerm\": \"V-VIATURA\",\n    \"documentLines\": [\n      {\n        \"salesItem\": \"ARECA\",\n        \"description\":\"Palmeira areca em vaso grês\",\n        \"quantity\": 1,\n        \"unitPrice\": {\n                \"amount\": 65,\n                \"baseAmount\": 65,\n                \"reportingAmount\": 65,\n                \"fractionDigits\": 2,\n                \"symbol\": \"€\"\n            },\n        \"unit\": \"UN\",\n        \"itemTaxSchema\": \"IVA-TN\",\n        \"deliveryDate\": \"2018-01-04T00:00:00\"\n      }\n    ],\n    \"WTaxTotal\" : { \"amount\": 0,\n        \"baseAmount\": 0,\n        \"reportingAmount\": 0,\n        \"fractionDigits\": 2,\n        \"symbol\": \"€\"},\n        \"TotalLiability\" : {\n          \"baseAmount\": 0,\n          \"reportingAmount\": 0,\n          \"fractionDigits\": 2,\n          \"symbol\": \"€\"\n          }\n }"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"billing",
+								"invoices",
+								""
+							]
+						},
+						"description": "Criação de fatura com uma linha"
+					},
+					"response": []
+				},
+				{
+					"name": "Add series type to Invoice Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n       {\n           \"serie\": \"2020\"\n       }\n"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/invoiceTypes/Default/FA/documentTypeSeries",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salesCore",
+								"invoiceTypes",
+								"Default",
+								"FA",
+								"documentTypeSeries"
+							]
+						},
+						"description": "Criação de fatura com uma linha"
+					},
+					"response": []
+				},
+				{
+					"name": "List All invoice types",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/invoiceTypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salesCore",
+								"invoiceTypes"
+							]
+						},
+						"description": "Obtenção de todos os tipos de faturas"
+					},
+					"response": []
+				},
+				{
+					"name": "List invoice type by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/invoiceTypes/5a587d8a-1c19-419e-b791-2eb0999bffbb",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salesCore",
+								"invoiceTypes",
+								"5a587d8a-1c19-419e-b791-2eb0999bffbb"
+							]
+						},
+						"description": "Obtenção dos dados do tipo de encomenda por id"
+					},
+					"response": []
+				},
+				{
+					"name": "Create invoice type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"company\": \"Default\",\n    \"typeKey\": \"FAT\",\n    \"cashInvoice\": false,\n    \"accountingSchema\": 1,\n    \"isPortugueseCompany\": true,\n    \"fiscalDocumentType\": \"FT\",\n    \"documentTypeSeries\": [\n        {\n        \t\"numberOfCopies\": 2,\n        \t\"isDefault\": true,\n        \t\"taxIncluded\": false,\n        \t\"isManual\": false,\n            \"isExternal\": false,\n            \"serie\": \"2016\",\n            \"communicationType\": 2\n        }\n    ]\n  }"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/invoiceTypes/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salesCore",
+								"invoiceTypes",
+								""
+							]
+						},
+						"description": "Criação de tipo de fatura"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
