@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "73bef884-a5e7-de36-8371-57e546e27614",
+		"name": "Sales_Customers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "SalesCore - Get Customer Party by key",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/customerParties/0004",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salescore",
+								"customerParties",
+								"0004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesCore -  create Customer Party and base entity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Postman\",\n    \"isExternallyManaged\": false,\n    \"currency\": \"EUR\",\n    \"isPerson\": true,\n    \"country\": \"ES\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/customerParties",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salescore",
+								"customerParties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesCore -  create Customer Party Extension",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BaseEntityKey\": \"0004\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/customerParties/extension",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salescore",
+								"customerParties",
+								"extension"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesCore - Get Customer Parties (OData)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/customerParties/odata?$filter=PartyKey eq 'LIMA'",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salesCore",
+								"customerParties",
+								"odata"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "PartyKey eq 'LIMA'"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesCore - Get Customer Parties",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/customerParties",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salesCore",
+								"customerParties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesCore - Customers By Page",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/customerParties?page=1&pageSize=20",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salescore",
+								"customerParties"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer by key",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/customerParties/0004",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salesCore",
+								"customerParties",
+								"0004"
+							]
+						},
+						"description": "Remover cliente através da key"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
