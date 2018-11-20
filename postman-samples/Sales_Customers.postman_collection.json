@@ -27,7 +27,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/customerParties/0004",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/customerParties/{partyKey}",
 							"host": [
 								"{{url}}"
 							],
@@ -37,7 +37,7 @@
 								"{{organization}}",
 								"salescore",
 								"customerParties",
-								"0004"
+								"{partyKey}"
 							]
 						}
 					},
@@ -250,7 +250,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/customerParties/0004",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/customerParties/{partyKey}",
 							"host": [
 								"{{url}}"
 							],
@@ -260,7 +260,7 @@
 								"{{organization}}",
 								"salesCore",
 								"customerParties",
-								"0004"
+								"{partyKey}"
 							]
 						},
 						"description": "Remover cliente através da key"
