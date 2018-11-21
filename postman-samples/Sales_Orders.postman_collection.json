@@ -106,7 +106,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders/{{company}}/ECL/2017/8",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders/{companyKey}/{documentType}/{serie}/{seriesNumber}",
 							"host": [
 								"{{url}}"
 							],
@@ -116,10 +116,10 @@
 								"{{organization}}",
 								"sales",
 								"orders",
-								"{{company}}",
-								"ECL",
-								"2017",
-								"8"
+								"{companyKey}",
+								"{documentType}",
+								"{serie}",
+								"{seriesNumber}"
 							]
 						}
 					},
@@ -144,7 +144,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/orderTypes/b2633753-9e3f-44a4-906e-6b5d84077712",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/orderTypes/{id}",
 							"host": [
 								"{{url}}"
 							],
@@ -154,7 +154,7 @@
 								"{{organization}}",
 								"salesCore",
 								"orderTypes",
-								"b2633753-9e3f-44a4-906e-6b5d84077712"
+								"{id}"
 							]
 						}
 					},
@@ -179,7 +179,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders/25761a29-c8e9-e811-a140-0003ff55bd4b",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders/{id}",
 							"host": [
 								"{{url}}"
 							],
@@ -189,7 +189,7 @@
 								"{{organization}}",
 								"sales",
 								"orders",
-								"25761a29-c8e9-e811-a140-0003ff55bd4b"
+								"{id}"
 							]
 						}
 					},
@@ -211,10 +211,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"buyerCustomerParty\": \"0002\",\r\n\t\"deliveryTerm\":\"Transp\",\r\n\t\"documentDate\":\"2018-11-16T00:00:00\",\r\n\t\"documentLines\": [\r\n\t{\r\n\t\t\"salesItem\": \"ART01\"\r\n\t}\r\n\t]\r\n  }"
+							"raw": "{\r\n\t\"buyerCustomerParty\": \"0002\",\r\n\t\"deliveryTerm\":\"Transp\",\r\n\t\"documentDate\":\"2018-11-21T00:00:00\",\r\n\t\"documentLines\": [\r\n\t{\r\n\t\t\"salesItem\": \"ART01\"\r\n\t}\r\n\t]\r\n  }"
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders?company={{company}}",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders",
 							"host": [
 								"{{url}}"
 							],
@@ -224,12 +224,6 @@
 								"{{organization}}",
 								"sales",
 								"orders"
-							],
-							"query": [
-								{
-									"key": "company",
-									"value": "{{company}}"
-								}
 							]
 						}
 					},
@@ -322,7 +316,7 @@
 							"raw": "{\n    \"serie\": \"2020\"\n}"
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/orderTypes/Default/ECL/documentTypeSeries",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/orderTypes/{companyKey}/{typeKey}/documentTypeSeries",
 							"host": [
 								"{{url}}"
 							],
@@ -332,8 +326,8 @@
 								"{{organization}}",
 								"salesCore",
 								"orderTypes",
-								"Default",
-								"ECL",
+								"{companyKey}",
+								"{typeKey}",
 								"documentTypeSeries"
 							]
 						}
@@ -356,10 +350,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"documentType\": \"ECL\",\r\n\t\"buyerCustomerParty\": \"SOFRIO\",\r\n\t\"documentDate\":\"2018-11-16T00:00:00\",\r\n\t\"paymentMethod\": \"NUM\",\r\n\t\"deliveryTerm\":\"TRANSP\",\r\n\t\"paymentTerm\": \"00\",\r\n\t\"priceList\": \"PVP2\",\r\n\t\"salesChannel\": \"LOJA\",\r\n    \"unloadingPoint\": \"O seu endereço de Casa\",\r\n    \"unloadingStreetName\": \"Rua de Ouro\",\r\n    \"unloadingBuildingNumber\": \"1000\",\r\n    \"unloadingPostalZone\": \"4700-374\",\r\n    \"unloadingCityName\": \"Braga\",\t\r\n\t\"unloadingCountry\": \"PT\",\r\n\t\"discount\": 10,\r\n\t\"currency\": \"USD\",\r\n\t\"exchangeRate\": 1.08,\r\n\t\"documentLines\": [\r\n\t{\r\n\t\t\"salesItem\": \"ARECA\",\r\n\t\t\"quantity\": 2,\r\n\t\t\"unit\": \"UN\",\r\n\t\t\"unitPrice\": {\r\n          \"amount\": 100.00\r\n        },\r\n\t\t\"warehouse\": \"A1\"\r\n\t}\r\n\t]\r\n  }"
+							"raw": "{\r\n\t\"documentType\": \"ECL\",\r\n\t\"buyerCustomerParty\": \"SOFRIO\",\r\n\t\"documentDate\":\"2018-11-21T00:00:00\",\r\n\t\"paymentMethod\": \"NUM\",\r\n\t\"deliveryTerm\":\"TRANSP\",\r\n\t\"paymentTerm\": \"00\",\r\n\t\"priceList\": \"PVP2\",\r\n\t\"salesChannel\": \"LOJA\",\r\n    \"unloadingPoint\": \"O seu endereço de Casa\",\r\n    \"unloadingStreetName\": \"Rua de Ouro\",\r\n    \"unloadingBuildingNumber\": \"1000\",\r\n    \"unloadingPostalZone\": \"4700-374\",\r\n    \"unloadingCityName\": \"Braga\",\t\r\n\t\"unloadingCountry\": \"PT\",\r\n\t\"discount\": 10,\r\n\t\"currency\": \"USD\",\r\n\t\"exchangeRate\": 1.08,\r\n\t\"documentLines\": [\r\n\t{\r\n\t\t\"salesItem\": \"ARECA\",\r\n\t\t\"quantity\": 2,\r\n\t\t\"unit\": \"UN\",\r\n\t\t\"unitPrice\": {\r\n          \"amount\": 100.00\r\n        },\r\n\t\t\"warehouse\": \"A1\"\r\n\t}\r\n\t]\r\n  }"
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders?company={{company}}",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders",
 							"host": [
 								"{{url}}"
 							],
@@ -369,12 +363,6 @@
 								"{{organization}}",
 								"sales",
 								"orders"
-							],
-							"query": [
-								{
-									"key": "company",
-									"value": "{{company}}"
-								}
 							]
 						}
 					},
@@ -399,7 +387,7 @@
 							"raw": "20"
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders/Default/ECL2/2020/1/documentLines/d63ed4bd-f3eb-e811-a140-0003ff55bd4b/quantity",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders/{companyKey}/{documentType}/{serie}/{seriesNumber}/documentLines/{lineId}/quantity",
 							"host": [
 								"{{url}}"
 							],
@@ -409,12 +397,12 @@
 								"{{organization}}",
 								"sales",
 								"orders",
-								"Default",
-								"ECL2",
-								"2020",
-								"1",
+								"{companyKey}",
+								"{documentType}",
+								"{serie}",
+								"{seriesNumber}",
 								"documentLines",
-								"d63ed4bd-f3eb-e811-a140-0003ff55bd4b",
+								"{lineId}",
 								"quantity"
 							]
 						}
@@ -440,7 +428,7 @@
 							"raw": "1"
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders/Default/ECL/2017/1/discount",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders/{companyKey}/{documentType}/{serie}/{seriesNumber}/discount",
 							"host": [
 								"{{url}}"
 							],
@@ -450,10 +438,10 @@
 								"{{organization}}",
 								"sales",
 								"orders",
-								"Default",
-								"ECL",
-								"2017",
-								"1",
+								"{companyKey}",
+								"{documentType}",
+								"{serie}",
+								"{seriesNumber}",
 								"discount"
 							]
 						}
@@ -479,7 +467,7 @@
 							"raw": "{ \"salesItem\": \"0006\" }"
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders/Default/ECL2/2020/1/documentlines/d63ed4bd-f3eb-e811-a140-0003ff55bd4b",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/sales/orders/{companyKey}/{documentType}/{serie}/{seriesNumber}/documentlines/{lineId}",
 							"host": [
 								"{{url}}"
 							],
@@ -489,12 +477,12 @@
 								"{{organization}}",
 								"sales",
 								"orders",
-								"Default",
-								"ECL2",
-								"2020",
-								"1",
+								"{companyKey}",
+								"{documentType}",
+								"{serie}",
+								"{seriesNumber}",
 								"documentlines",
-								"d63ed4bd-f3eb-e811-a140-0003ff55bd4b"
+								"{lineId}"
 							]
 						}
 					},
@@ -519,7 +507,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/ordertypes/Default/ECL",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/ordertypes/{companyKey}/{documentType}",
 							"host": [
 								"{{url}}"
 							],
@@ -529,8 +517,8 @@
 								"{{organization}}",
 								"salescore",
 								"ordertypes",
-								"Default",
-								"ECL"
+								"{companyKey}",
+								"{documentType}"
 							]
 						}
 					},
@@ -589,7 +577,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/processOrders/1/200?company=Default&accountingCustomerParty=SOFRIO&currency=EUR&billingRequestDateFrom=2018-03-01T00:00:00&?billingRequestDateUntil=2018-11-19T00:00:00",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/processOrders/{pageIndex}/{pageSize}?company=Default&accountingCustomerParty=SOFRIO&currency=EUR&billingRequestDateFrom=2018-03-01T00:00:00&?billingRequestDateUntil=2018-11-19T00:00:00",
 							"host": [
 								"{{url}}"
 							],
@@ -599,8 +587,8 @@
 								"{{organization}}",
 								"billing",
 								"processOrders",
-								"1",
-								"200"
+								"{pageIndex}",
+								"{pageSize}"
 							],
 							"query": [
 								{
@@ -652,7 +640,7 @@
 							"raw": "[\n\t{\n\t    \"deliveryKey\": \"GT.2017.4\",\n    \t\"deliveryLineNumber\": 1,\n    \t\"orderKey\": \"ECL.2017.1\",\n    \t\"orderLineNumber\": 2\n\t}\n]"
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/processOrders/Default",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/processOrders/{companyKey}",
 							"host": [
 								"{{url}}"
 							],
@@ -662,7 +650,7 @@
 								"{{organization}}",
 								"billing",
 								"processOrders",
-								"Default"
+								"{companyKey}"
 							]
 						}
 					},
@@ -687,7 +675,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/processReturnOrders/1/200?company=Default",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/processReturnOrders/{pageIndex}/{pageSize}?company=Default",
 							"host": [
 								"{{url}}"
 							],
@@ -697,8 +685,8 @@
 								"{{organization}}",
 								"billing",
 								"processReturnOrders",
-								"1",
-								"200"
+								"{pageIndex}",
+								"{pageSize}"
 							],
 							"query": [
 								{
