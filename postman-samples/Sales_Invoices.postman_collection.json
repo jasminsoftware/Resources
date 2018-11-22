@@ -63,7 +63,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/PRI/FA/2018/2",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/{companyKey}/{documentType}/{serie}/{seriesNumber}",
 							"host": [
 								"{{url}}"
 							],
@@ -73,10 +73,10 @@
 								"{{organization}}",
 								"billing",
 								"invoices",
-								"PRI",
-								"FA",
-								"2018",
-								"2"
+								"{companyKey}",
+								"{documentType}",
+								"{serie}",
+								"{seriesNumber}"
 							]
 						},
 						"description": "Obter os dados de uma fatura pela key"
@@ -139,7 +139,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/814acd42-83e3-e811-a140-0003ff55bd4b",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/{id}",
 							"host": [
 								"{{url}}"
 							],
@@ -149,7 +149,7 @@
 								"{{organization}}",
 								"billing",
 								"invoices",
-								"814acd42-83e3-e811-a140-0003ff55bd4b"
+								"{id}"
 							]
 						},
 						"description": "Obter os dados de uma fatura pela key"
@@ -178,7 +178,7 @@
 							"raw": "\"Vamos Jantar\""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/PRI/FA/2018/1/noteToRecipient",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/{companyKey}/{documentType}/{serie}/{seriesNumber}/noteToRecipient",
 							"host": [
 								"{{url}}"
 							],
@@ -188,14 +188,67 @@
 								"{{organization}}",
 								"billing",
 								"invoices",
-								"PRI",
-								"FA",
-								"2018",
-								"1",
+								"{companyKey}",
+								"{documentType}",
+								"{serie}",
+								"{seriesNumber}",
 								"noteToRecipient"
 							]
 						},
 						"description": "Obter os dados de uma fatura pela key"
+					},
+					"response": []
+				},
+				{
+					"name": "Billing - Get Invoices (OData)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/odata?$select=Company, PostingDate, PayableAmountAmount, ExchangeRate, CompanyDescription, CompanyId, BuyerCustomerPartyBaseEntityId, BuyerCustomerParty , BuyerCustomerPartyName, Currency, Id&$filter=day(PostingDate) lt 17 and month(PostingDate) eq 11 and year(PostingDate) eq 2018 and Company eq 'Default' and IsDeleted eq false&$inlinecount=allpages&$orderby=PostingDate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"billing",
+								"invoices",
+								"odata"
+							],
+							"query": [
+								{
+									"key": "$select",
+									"value": "Company, PostingDate, PayableAmountAmount, ExchangeRate, CompanyDescription, CompanyId, BuyerCustomerPartyBaseEntityId, BuyerCustomerParty , BuyerCustomerPartyName, Currency, Id"
+								},
+								{
+									"key": "$filter",
+									"value": "day(PostingDate) lt 17 and month(PostingDate) eq 11 and year(PostingDate) eq 2018 and Company eq 'Default' and IsDeleted eq false"
+								},
+								{
+									"key": "$inlinecount",
+									"value": "allpages"
+								},
+								{
+									"key": "$orderby",
+									"value": "PostingDate"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -218,7 +271,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/b810ce21-09e6-4990-9e7e-7790848c6705",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/{id}",
 							"host": [
 								"{{url}}"
 							],
@@ -228,7 +281,7 @@
 								"{{organization}}",
 								"billing",
 								"invoices",
-								"b810ce21-09e6-4990-9e7e-7790848c6705"
+								"{id}"
 							]
 						}
 					},
@@ -305,7 +358,7 @@
 					"response": []
 				},
 				{
-					"name": "Add series type to Invoice Type",
+					"name": "Sales - Create InvoiceType (Add series type to Invoice Type)",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -323,7 +376,7 @@
 							"raw": "\n       {\n           \"serie\": \"2020\"\n       }\n"
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/invoiceTypes/Default/FA/documentTypeSeries",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/invoiceTypes/{companyKey}/{documentType}/documentTypeSeries",
 							"host": [
 								"{{url}}"
 							],
@@ -333,12 +386,46 @@
 								"{{organization}}",
 								"salesCore",
 								"invoiceTypes",
-								"Default",
-								"FA",
+								"{companyKey}",
+								"{documentType}",
 								"documentTypeSeries"
 							]
 						},
 						"description": "Criação de fatura com uma linha"
+					},
+					"response": []
+				},
+				{
+					"name": "Create InvoiceType Min",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"company\": \"Default\",\n    \"typeKey\": \"FA3\",\n    \"fiscalDocumentType\": \"FS\",\n    \"documentTypeSeries\": [\n    {\n        \"serie\": \"2018\",\n        \"isDefault\": true\n    }\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/invoiceTypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salesCore",
+								"invoiceTypes"
+							]
+						}
 					},
 					"response": []
 				},
@@ -396,7 +483,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/invoiceTypes/5a587d8a-1c19-419e-b791-2eb0999bffbb",
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/invoiceTypes/{id}",
 							"host": [
 								"{{url}}"
 							],
@@ -406,7 +493,7 @@
 								"{{organization}}",
 								"salesCore",
 								"invoiceTypes",
-								"5a587d8a-1c19-419e-b791-2eb0999bffbb"
+								"{id}"
 							]
 						},
 						"description": "Obtenção dos dados do tipo de encomenda por id"
@@ -429,7 +516,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"company\": \"Default\",\n    \"typeKey\": \"FAT\",\n    \"cashInvoice\": false,\n    \"accountingSchema\": 1,\n    \"isPortugueseCompany\": true,\n    \"fiscalDocumentType\": \"FT\",\n    \"documentTypeSeries\": [\n        {\n        \t\"numberOfCopies\": 2,\n        \t\"isDefault\": true,\n        \t\"taxIncluded\": false,\n        \t\"isManual\": false,\n            \"isExternal\": false,\n            \"serie\": \"2016\",\n            \"communicationType\": 2\n        }\n    ]\n  }"
+							"raw": "{\n    \"company\": \"Default\",\n    \"typeKey\": \"FAT\",\n    \"cashInvoice\": false,\n    \"accountingSchema\": 1,\n    \"isPortugueseCompany\": true,\n    \"fiscalDocumentType\": \"FT\",\n    \"documentTypeSeries\": [\n        {\n        \t\"numberOfCopies\": 2,\n        \t\"isDefault\": true,\n        \t\"taxIncluded\": false,\n        \t\"isManual\": false,\n            \"isExternal\": false,\n            \"serie\": \"2018\",\n            \"communicationType\": 2\n        }\n    ]\n  }"
 						},
 						"url": {
 							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/invoiceTypes/",
@@ -446,6 +533,51 @@
 							]
 						},
 						"description": "Criação de tipo de fatura"
+					},
+					"response": []
+				},
+				{
+					"name": "Billing - Get Invoices (OData)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/billing/invoices/odata?$filter=DocumentType eq 'FA'&$orderby=LoadingCityName",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"billing",
+								"invoices",
+								"odata"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "DocumentType eq 'FA'"
+								},
+								{
+									"key": "$orderby",
+									"value": "LoadingCityName"
+								}
+							]
+						}
 					},
 					"response": []
 				}
