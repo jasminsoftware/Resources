@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "73bef884-a5e7-de36-8371-57e546e27614",
+		"name": "Purchases_Orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Purchases - Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/purchases/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"purchases",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Purchases - Orders - Create Min",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"sellerSupplierParty\": \"SOFLOR\",\r\n\t\"documentLines\": [\r\n\t{\r\n\t\t\"purchasesItem\": \"ARECA\"\r\n\t}\r\n\t]\r\n }"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/purchases/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"purchases",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Purchases - Orders - Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"sellerSupplierParty\": \"SOFLOR\",\r\n\t\"SellerSupplierPartyName\":\"SOFLOR\",\r\n\t\"documentDate\":\"2017-04-19T00:00:00\",\r\n\t\"company\":\"Default\",\r\n\t\"deliveryTerm\":\"Transp\",\r\n\t\"PaymentMethod\":\"TRA\",\r\n\t\"PaymentTerm\":\"01\",\r\n\t\"LoadingCountry\":\"PT\",\r\n\t\"AccountingParty\":\"Soflor\",\r\n\t\"documentLines\": [\r\n\t{\r\n\t\t\"purchasesItem\": \"ARECA\"\r\n\t}\r\n\t]\r\n }"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/purchases/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"purchases",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InvoiceReceipt - ProcessOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/invoiceReceipt/processOrders/{pageIndex}/{pageSize}?company={company}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"invoiceReceipt",
+								"processOrders",
+								"{pageIndex}",
+								"{pageSize}"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "{company}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InvoiceReceipt - ProcessOrders",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"goodsReceiptNoteKey\": \"VGR.2017.3\",\n      \"goodsReceiptNoteLineNumber\": 1,\n      \"orderKey\": \"ECF.2017.1\",\n      \"orderLineNumber\": 1\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/invoiceReceipt/processOrders/{company}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"invoiceReceipt",
+								"processOrders",
+								"{company}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "goodsReceipt - ProcessOrders",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"SourceDocKey\": \"ECF.2017.2\",\n    \"SourceDocLineNumber\": 1,\n    \"quantity\": 1\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/goodsreceipt/processOrders/{company}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"goodsreceipt",
+								"processOrders",
+								"{company}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "goodsReceipt - ProcessOrders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"goodsReceiptNoteKey\": \"VGR.2017.3\",\n      \"goodsReceiptNoteLineNumber\": 1,\n      \"orderKey\": \"ECF.2017.1\",\n      \"orderLineNumber\": 1\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/goodsReceipt/processOrders/{pageIndex}/{pageSize}?company={company}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"goodsReceipt",
+								"processOrders",
+								"{pageIndex}",
+								"{pageSize}"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "{company}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InvoiceReceipt - ProcessReturnOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/invoiceReceipt/processReturnOrders/{pageIndex}/{pageSize}?company={company}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"invoiceReceipt",
+								"processReturnOrders",
+								"{pageIndex}",
+								"{pageSize}"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "{company}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
