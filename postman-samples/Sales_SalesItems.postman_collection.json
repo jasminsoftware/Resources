@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "73bef884-a5e7-de36-8371-57e546e27614",
+		"name": "Sales_SalesItems",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SalesItems",
+			"item": [
+				{
+					"name": "SalesCore - SalesItemsExtension",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/salesItems/ARECA/extension",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salesCore",
+								"salesItems",
+								"ARECA",
+								"extension"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesCore - Extension (enviar mesmo ID da base)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"baseentitykey\": \"0001\",\n   \"id\": \"64999462-12a8-4c8f-aa1e-aad248acd354\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/salesitems/extension",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salescore",
+								"salesitems",
+								"extension"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesCore - Extension",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"baseentitykey\": \"NEW04\",\n  \"itemTaxSchema\": \"IVA-TN\",\n  \"incomeAccount\": \"71111\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/salesItems/extension",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salescore",
+								"salesItems",
+								"extension"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesCore - Get Sales Item",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/salesitems/0002",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salescore",
+								"salesitems",
+								"0002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesCore - CreateSalesItem Min",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"itemkey\": \"NEW05\",\n  \"baseUnit\": \"KG\",\n  \"itemType\": \"Service\",\n  \"itemTaxSchema\": \"IVA-TN\",\n  \"incomeAccount\": \"71111\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salesCore/salesItems",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salesCore",
+								"salesItems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesCore - Create Sales Item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"itemKey\":\"ERP7\",\n\t\"description\":\"Pentium D925 Dual Core\",\n\t\"assortment\":\"01\",\n\t\"barcode\":\"5601234901248\",\n\t\"brand\":\"NOBRAND\",\n\t\"brandModel\":null,\n\t\"itemType\":\"01\",\n\t\"isActive\":1,\n\t\"baseUnit\":\"UN\",\n\t\"unit\":\"UN\",\n\t\"itemTaxSchema\":\"IVA-TN\",\n\t\"priceListLines\":\n\t[\n\t\t{\"priceList\":\"PVP1\",\n\t\t\"priceAmount\":\n\t\t\t{\n\t\t\t\t\"amount\":1000.00\n\t\t\t},\n\t\t\t\"unit\":\"UN\"\n\t\t},\n\t\t{\"priceList\":\"PVP2\",\n\t\t\"priceAmount\":\n\t\t\t{\n\t\t\t\t\"amount\":698.00\n\t\t\t\t\n\t\t\t},\n\t\t\t\"unit\":\"UN\"\n\t\t},\n\t\t{\"priceList\":\"PVP3\",\n\t\t\"priceAmount\":\n\t\t\t{\n\t\t\t\t\"amount\":748.00\n\t\t\t},\n\t\t\"unit\":\"UN\"\n\t\t},\n\t\t{\n\t\t\t\"priceList\":\"PVP4\",\n\t\t\t\"priceAmount\":\n\t\t\t{\n\t\t\t\t\"amount\":700.00\n\t\t\t},\n\t\t\t\"unit\":\"UN\"\n\t\t},\n\t\t{\n\t\t\t\"priceList\":\"PVP5\",\n\t\t\t\"priceAmount\":\n\t\t\t{\n\t\t\t\t\"amount\":817.00\n\t\t\t},\n\t\t\t\"unit\":\"UN\"\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/{{tenant}}/{{organization}}/salescore/salesitems",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{tenant}}",
+								"{{organization}}",
+								"salescore",
+								"salesitems"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
