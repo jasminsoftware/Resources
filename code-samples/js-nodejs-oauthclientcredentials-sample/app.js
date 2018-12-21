@@ -12,11 +12,12 @@ request({
     'scope': 'application',
   }
 }, function(err, res) {
-  if (res == undefined) {
-    console.log("Could not obtain acess token.");
+  if (res) {
+	var json = JSON.parse(res.body);
+    console.log("Access Token:", json.access_token);
+    
   }
   else {
-    var json = JSON.parse(res.body);
-    console.log("Access Token:", json.access_token);
+    console.log("Could not obtain acess token.");
   }
 });
