@@ -1,7 +1,7 @@
 var request = require('request');
  
 request({
-  url: 'hhttps://identity.primaverabss.com/core/connect/token',
+  url: 'https://identity.primaverabss.com/core/connect/token',
   method: 'POST',
   auth: {
     user: '<CLIENT_ID>', // TODO : put your application client id here
@@ -12,7 +12,7 @@ request({
     'scope': 'application',
   }
 }, function(err, res) {
-  if (res == undefined) {
+  if (res) {
     console.log("Could not obtain acess token.");
   }
   else {
