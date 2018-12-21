@@ -12,7 +12,7 @@ request({
     'scope': 'application',
   }
 }, function(err, res) {
-  if (res) {
+  if (res == undefined) {
     console.log("Could not obtain acess token.");
   }
   else {
