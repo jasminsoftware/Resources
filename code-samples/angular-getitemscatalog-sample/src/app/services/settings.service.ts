@@ -19,8 +19,8 @@ import 'rxjs/add/observable/empty';
 export class SettingsService {
 
     public appBaseUri: string = "https://localhost:4200";
-    public tenantKey: string = "<subscription account>"; //sample: 10001
-    public organizationKey: string = "<subscription alias>; //sample: 10001-0876"
+    public tenantKey: string = "<your tenant key>"; //sample: 10001
+    public organizationKey: string = "<your organization key>"; //sample: 10001-0876
     public jasminBaseUri: string = "https://my.jasminsoftware.com";
     public jasminApiUri: string = "https://my.jasminsoftware.com/api/{0}/{1}/{2}/{3}";
     public identityServerClientId: string = "<applicationId>"; //sample: jasmin-items
