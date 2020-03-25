@@ -1,8 +1,0 @@
-D:\PrjNET\JDN\Resources\code-samples\csharp-listorders-sample\csharp-listorders-sample\bin\Debug\ListOrders.exe.config
-D:\PrjNET\JDN\Resources\code-samples\csharp-listorders-sample\csharp-listorders-sample\bin\Debug\ListOrders.exe
-D:\PrjNET\JDN\Resources\code-samples\csharp-listorders-sample\csharp-listorders-sample\bin\Debug\ListOrders.pdb
-D:\PrjNET\JDN\Resources\code-samples\csharp-listorders-sample\csharp-listorders-sample\bin\Debug\Newtonsoft.Json.dll
-D:\PrjNET\JDN\Resources\code-samples\csharp-listorders-sample\csharp-listorders-sample\bin\Debug\Newtonsoft.Json.xml
-D:\PrjNET\JDN\Resources\code-samples\csharp-listorders-sample\csharp-listorders-sample\obj\Debug\csharp-listorders-sample.csproj.CoreCompileInputs.cache
-D:\PrjNET\JDN\Resources\code-samples\csharp-listorders-sample\csharp-listorders-sample\obj\Debug\ListOrders.exe
-D:\PrjNET\JDN\Resources\code-samples\csharp-listorders-sample\csharp-listorders-sample\obj\Debug\ListOrders.pdb

@@ -10,6 +10,7 @@
         /// </summary>
         public const string baseAppUrl = "https://my.jasminsoftware.com";
 
+
         /// <summary>
         /// The default culture
         /// </summary>
