@@ -110,7 +110,7 @@ If you press '1', the **Customer** submenu will display this options:
 0 - Back to Main Menu
 
 ```
-**TIP** - Go through all options (go back to option 3 whenever you want and see how the application handles) before returning to the main menu.
+**_TIP_** - Go through all options (go back to option 3 whenever you want and see how the application handles) before returning to the main menu.
 
 If you press '2', the **Sales Items** submenu will display this options:
 ```
@@ -125,7 +125,7 @@ If you press '2', the **Sales Items** submenu will display this options:
 
 0 - Back to Main Menu
 ```
-**TIP** - Go through all options (go back to option 3 whenever you want and see how the application handles) before returning to the main menu.
+**_TIP_** - Go through all options (go back to option 3 whenever you want and see how the application handles) before returning to the main menu.
 
 If you press '3', the **Sales Orders** SubMenu will look like this:
 ```
@@ -141,7 +141,7 @@ If you press '3', the **Sales Orders** SubMenu will look like this:
 0 - Back To Main Menu
 ```
 
-**TIP** - I would suggest you to go from option 1 to 4, then play a bit with options 5, 6 and 7 (go back to option 4 as many times as you want to get a view of the progress of your actions) and then option 8 and 0 to exit.
+**_TIP_** - I would suggest you to go from option 1 to 4, then play a bit with options 5, 6 and 7 (go back to option 4 as many times as you want to get a view of the progress of your actions) and then option 8 before returning to the main menu.
 
 If you press '4', the **Sales Invoices** submenu will display this options:
 ```
@@ -154,7 +154,7 @@ If you press '4', the **Sales Invoices** submenu will display this options:
 0 - Back To Main Menu
 ```
 
-**TIP** - Go through all options before returning to the main menu.
+**_TIP_** - Go through all options before returning to the main menu.
 
 *Have a great time and think about that great idea that will make you stand-up from the rest of the crowd!*
 
