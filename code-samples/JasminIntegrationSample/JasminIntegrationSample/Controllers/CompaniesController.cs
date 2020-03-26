@@ -61,7 +61,7 @@ namespace Jasmin.IntegrationSample
                     Console.WriteLine("As documents are company dependent entities, for this sample, we will need to"); 
                     Console.WriteLine("get the company key where we will be acting upon");
 
-                    string request = "corepatterns/companies/odata?$select=CompanyKey&$filter=IsActive eq true and IsSystem eq false and IsDeleted eq false &$top=1&$skip=1&$orderby=CreatedOn";
+                    string request = "corepatterns/companies/odata?$select=CompanyKey&$filter=IsActive eq true and IsSystem eq false and IsDeleted eq false &$top=1&$orderby=CreatedOn";
                     string resourceLocation = string.Format("{0}/api/{1}/{2}/{3}", Constants.baseAppUrl, AccountKey, SubscriptionKey, request);
 
                     client.SetDefaultRequestHeaders(CultureKey);
