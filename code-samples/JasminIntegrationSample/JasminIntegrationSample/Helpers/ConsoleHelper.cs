@@ -90,18 +90,15 @@ namespace Jasmin.IntegrationSample
         {
             Console.WriteLine("");
             Console.WriteLine("*******************************************");
-            Console.WriteLine("This is your awesome menu.");
+            Console.WriteLine("This is your application menu.");
             Console.WriteLine("What do you want to do?");
+            Console.WriteLine("Please select your context");
             Console.WriteLine("*******************************************");
             Console.WriteLine("");
-            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_Orders_GetAll, MenuOptions.Sales_Orders_GetAll.ToName()));
-            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_Orders_GetOdata, MenuOptions.Sales_Orders_GetOdata.ToName()));
-            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_Orders_Create, MenuOptions.Sales_Orders_Create.ToName()));
-            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_Orders_GetLastOrder, MenuOptions.Sales_Orders_GetLastOrder.ToName()));
-            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_Orders_InsertLine, MenuOptions.Sales_Orders_InsertLine.ToName()));
-            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_Orders_UpdateQtd, MenuOptions.Sales_Orders_UpdateQtd.ToName()));
-            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_Orders_DelLastLine, MenuOptions.Sales_Orders_DelLastLine.ToName()));
-            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_Orders_Del, MenuOptions.Sales_Orders_Del.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_Customers, MenuOptions.Sales_Customers.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_SalesItems, MenuOptions.Sales_SalesItems.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_SalesOrders, MenuOptions.Sales_SalesOrders.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Sales_SalesInvoices, MenuOptions.Sales_SalesInvoices.ToName()));
             Console.WriteLine("");
             Console.WriteLine(string.Format("{0:D} - {1}", MenuOptions.Exit, MenuOptions.Exit.ToName()));
             Console.WriteLine("");
@@ -142,6 +139,231 @@ namespace Jasmin.IntegrationSample
             {
                 WriteWaitingMessage();
                 Console.ReadKey();
+            }
+
+            return option;
+        }
+
+        internal static CustomersMenuOptions GetCustomersMenuOption()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("This is your Customers menu.");
+            Console.WriteLine("What do you want to do?");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("");
+            Console.WriteLine(string.Format("{0:D} - {1}", CustomersMenuOptions.Sales_Customers_CustomerAllInOne, CustomersMenuOptions.Sales_Customers_CustomerAllInOne.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", CustomersMenuOptions.Sales_Customers_PartyAndCustomer, CustomersMenuOptions.Sales_Customers_PartyAndCustomer.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", CustomersMenuOptions.Sales_Customers_GetLastCustomer, CustomersMenuOptions.Sales_Customers_GetLastCustomer.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", CustomersMenuOptions.Sales_Customers_UpdateCityAddress, CustomersMenuOptions.Sales_Customers_UpdateCityAddress.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", CustomersMenuOptions.Sales_Customers_UpdatePaymentTerm, CustomersMenuOptions.Sales_Customers_UpdatePaymentTerm.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", CustomersMenuOptions.Sales_Customers_DeleteCustomer, CustomersMenuOptions.Sales_Customers_DeleteCustomer.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", CustomersMenuOptions.Sales_Customers_AddCustomer, CustomersMenuOptions.Sales_Customers_AddCustomer.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", CustomersMenuOptions.Sales_Customers_DeleteAllParties, CustomersMenuOptions.Sales_Customers_DeleteAllParties.ToName()));
+            Console.WriteLine("");
+            Console.WriteLine(string.Format("{0:D} - {1}", CustomersMenuOptions.Exit, CustomersMenuOptions.Exit.ToName()));
+            Console.WriteLine("");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("");
+            Console.WriteLine("Type you option: ");
+
+            ConsoleKeyInfo userOption = Console.ReadKey(true);
+
+            CustomersMenuOptions option = CustomersMenuOptions.Exit;
+            int maxOption = option.Max();
+            int intOption = 0;
+
+            if (!int.TryParse(userOption.KeyChar.ToString(), out intOption))
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Not a valid Input. Back to Main Menu.");
+                intOption = 0;
+            }
+            else
+            {
+                if (intOption == 0)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("selected option " + string.Format("{0:D} - {1}", option, option.ToName()));
+                }
+                else if (intOption < 0 || intOption > maxOption)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Not a valid Input. Back to Main Menu.");
+                    intOption = 0;
+                }
+                else
+                {
+                    option = (CustomersMenuOptions)intOption;
+                }
+            }
+
+            return option;
+        }
+
+        internal static SalesItemsMenuOptions GetSalesItemsMenuOption()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("This is your Sales Items menu.");
+            Console.WriteLine("What do you want to do?");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("");
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesItemsMenuOptions.Sales_SalesItems_SalesItemAllInOne, SalesItemsMenuOptions.Sales_SalesItems_SalesItemAllInOne.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesItemsMenuOptions.Sales_SalesItems_ItemAndSalesItem, SalesItemsMenuOptions.Sales_SalesItems_ItemAndSalesItem.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesItemsMenuOptions.Sales_SalesItems_GetLastSalesItem, SalesItemsMenuOptions.Sales_SalesItems_GetLastSalesItem.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesItemsMenuOptions.Sales_SalesItems_SetPrices, SalesItemsMenuOptions.Sales_SalesItems_SetPrices.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesItemsMenuOptions.Sales_SalesItems_UpdatePrice, SalesItemsMenuOptions.Sales_SalesItems_UpdatePrice.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesItemsMenuOptions.Sales_SalesItems_DeleteSalesItem, SalesItemsMenuOptions.Sales_SalesItems_DeleteSalesItem.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesItemsMenuOptions.Sales_SalesItems_AddSalesItem, SalesItemsMenuOptions.Sales_SalesItems_AddSalesItem.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesItemsMenuOptions.Sales_SalesItems_DeleteAllItems, SalesItemsMenuOptions.Sales_SalesItems_DeleteAllItems.ToName()));
+            Console.WriteLine("");
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesItemsMenuOptions.Exit, SalesItemsMenuOptions.Exit.ToName()));
+            Console.WriteLine("");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("");
+            Console.WriteLine("Type you option: ");
+
+            ConsoleKeyInfo userOption = Console.ReadKey(true);
+
+            SalesItemsMenuOptions option = SalesItemsMenuOptions.Exit;
+            int maxOption = option.Max();
+            int intOption = 0;
+
+            if (!int.TryParse(userOption.KeyChar.ToString(), out intOption))
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Not a valid Input. Back to Main Menu.");
+                intOption = 0;
+            }
+            else
+            {
+                if (intOption == 0)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("selected option " + string.Format("{0:D} - {1}", option, option.ToName()));
+                }
+                else if (intOption < 0 || intOption > maxOption)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Not a valid Input. Back to Main Menu.");
+                    intOption = 0;
+                }
+                else
+                {
+                    option = (SalesItemsMenuOptions)intOption;
+                }
+            }
+
+            return option;
+        }
+
+        internal static SalesOrdersMenuOptions GetSalesOrdersMenuOption()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("This is your Sales Orders menu.");
+            Console.WriteLine("What do you want to do?");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("");
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesOrdersMenuOptions.Sales_Orders_GetAll, SalesOrdersMenuOptions.Sales_Orders_GetAll.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesOrdersMenuOptions.Sales_Orders_GetOdata, SalesOrdersMenuOptions.Sales_Orders_GetOdata.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesOrdersMenuOptions.Sales_Orders_Create, SalesOrdersMenuOptions.Sales_Orders_Create.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesOrdersMenuOptions.Sales_Orders_GetLastOrder, SalesOrdersMenuOptions.Sales_Orders_GetLastOrder.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesOrdersMenuOptions.Sales_Orders_InsertLine, SalesOrdersMenuOptions.Sales_Orders_InsertLine.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesOrdersMenuOptions.Sales_Orders_UpdateQtd, SalesOrdersMenuOptions.Sales_Orders_UpdateQtd.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesOrdersMenuOptions.Sales_Orders_DelLastLine, SalesOrdersMenuOptions.Sales_Orders_DelLastLine.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesOrdersMenuOptions.Sales_Orders_Del, SalesOrdersMenuOptions.Sales_Orders_Del.ToName()));
+            Console.WriteLine("");
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesOrdersMenuOptions.Exit, SalesOrdersMenuOptions.Exit.ToName()));
+            Console.WriteLine("");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("");
+            Console.WriteLine("Type you option: ");
+
+            ConsoleKeyInfo userOption = Console.ReadKey(true);
+
+            SalesOrdersMenuOptions option = SalesOrdersMenuOptions.Exit;
+            int maxOption = option.Max();
+            int intOption = 0;
+
+            if (!int.TryParse(userOption.KeyChar.ToString(), out intOption))
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Not a valid Input. Back to Main Menu.");
+                intOption = 0;
+            }
+            else
+            {
+                if (intOption == 0)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("selected option " + string.Format("{0:D} - {1}", option, option.ToName()));
+                }
+                else if (intOption < 0 || intOption > maxOption)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Not a valid Input. Back to Main Menu.");
+                    intOption = 0;
+                }
+                else
+                {
+                    option = (SalesOrdersMenuOptions)intOption;
+                }
+            }
+
+            return option;
+        }
+
+        internal static SalesInvoicesMenuOptions GetSalesInvoicesMenuOption()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("This is your Sales Invoices menu.");
+            Console.WriteLine("What do you want to do?");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("");
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesInvoicesMenuOptions.Sales_Invoices_GetAll, SalesInvoicesMenuOptions.Sales_Invoices_GetAll.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesInvoicesMenuOptions.Sales_Invoices_GetOdata, SalesInvoicesMenuOptions.Sales_Invoices_GetOdata.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesInvoicesMenuOptions.Sales_Invoices_Create, SalesInvoicesMenuOptions.Sales_Invoices_Create.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesInvoicesMenuOptions.Sales_Invoices_GetLastInvoice, SalesInvoicesMenuOptions.Sales_Invoices_GetLastInvoice.ToName()));
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesInvoicesMenuOptions.Sales_Invoices_Del, SalesInvoicesMenuOptions.Sales_Invoices_Del.ToName()));
+            Console.WriteLine("");
+            Console.WriteLine(string.Format("{0:D} - {1}", SalesInvoicesMenuOptions.Exit, SalesInvoicesMenuOptions.Exit.ToName()));
+            Console.WriteLine("");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("");
+            Console.WriteLine("Type you option: ");
+
+            ConsoleKeyInfo userOption = Console.ReadKey(true);
+
+            SalesInvoicesMenuOptions option = SalesInvoicesMenuOptions.Exit;
+            int maxOption = option.Max();
+            int intOption = 0;
+
+            if (!int.TryParse(userOption.KeyChar.ToString(), out intOption))
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Not a valid Input. Back to Main Menu.");
+                intOption = 0;
+            }
+            else
+            {
+                if (intOption == 0)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("selected option " + string.Format("{0:D} - {1}", option, option.ToName()));
+                }
+                else if (intOption < 0 || intOption > maxOption)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Not a valid Input. Back to Main Menu.");
+                    intOption = 0;
+                }
+                else
+                {
+                    option = (SalesInvoicesMenuOptions)intOption;
+                }
             }
 
             return option;

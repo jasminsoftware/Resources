@@ -1,9 +1,0 @@
-C:\Users\hugo.ribeiro\Desktop\JDN\Code\CreateCustomer\CreateCustomer\bin\Debug\CreateCustomer.exe.config
-C:\Users\hugo.ribeiro\Desktop\JDN\Code\CreateCustomer\CreateCustomer\bin\Debug\CreateCustomer.exe
-C:\Users\hugo.ribeiro\Desktop\JDN\Code\CreateCustomer\CreateCustomer\bin\Debug\CreateCustomer.pdb
-C:\Users\hugo.ribeiro\Desktop\JDN\Code\CreateCustomer\CreateCustomer\obj\Debug\CreateCustomer.csprojResolveAssemblyReference.cache
-C:\Users\hugo.ribeiro\Desktop\JDN\Code\CreateCustomer\CreateCustomer\obj\Debug\CreateCustomer.csproj.CoreCompileInputs.cache
-C:\Users\hugo.ribeiro\Desktop\JDN\Code\CreateCustomer\CreateCustomer\obj\Debug\CreateCustomer.exe
-C:\Users\hugo.ribeiro\Desktop\JDN\Code\CreateCustomer\CreateCustomer\obj\Debug\CreateCustomer.pdb
-C:\Users\hugo.ribeiro\Desktop\JDN\Code\CreateCustomer\CreateCustomer\bin\Debug\Newtonsoft.Json.dll
-C:\Users\hugo.ribeiro\Desktop\JDN\Code\CreateCustomer\CreateCustomer\bin\Debug\Newtonsoft.Json.xml

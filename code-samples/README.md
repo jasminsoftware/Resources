@@ -4,15 +4,15 @@ The following code samples are available to help you jump start the development 
 
 ### C# Samples
 
-- [**JasminIntegrationSample**](JasminIntegrationSample): list (using OData when needed), create, add (update and delete) order line and delete an Order using Client Credentials OAuth flow.
-- [**csharp-createcustomer-sample**](csharp-createcustomer-sample): create a customer using the Web API.
-- [**csharp-createinvoice-sample**](csharp-createinvoice-sample): create a sales invoice using the Web API.
-- [**csharp-createorder-sample**](csharp-createorder-sample): create a sales order using the Web API.
-- [**csharp-updatesalesitem-sample**](csharp-updatesalesitem-sample): update a sales item using the Web API.
-- [**csharp-listorders-sample**](csharp-listorders-sample): list the sales orders available using the Web API.
-- [**csharp-odata-sample**](csharp-odata-sample): list all sales orders attributes defined in OData search.
-- [**csharp-clientcredentials-getinvoice-sample**](csharp-clientcredentials-getinvoice-sample): list the sales invoices available using Client Credentials OAuth flow.
-- [**csharp-itemextensions-sample**](csharp-itemextensions-sample): create an item and add a sales item extension using the Web API.
+- [**JasminIntegrationSample**](JasminIntegrationSample): Use Client Credentials OAuth flow to handle:
+  - Customers - Create Party and Customer Extension (or AllInOne), Create a Party and then add the Customer Extension, Update some customer attributes, Delete Customer Extension and Delete Party.
+  - Sales Items - Create Item and Sales Extension (or AllInOne), Create an Item and its Sales Extension, Update some SalesItem attributes, Delete SalesItem Extension and Delete Item.
+  - Sales Orders - List (using OData when needed), Create Order, Add Line (update and delete) and Delete Order.
+  - Sales Invoices - List (using OData when needed), Create an Invoice and Delete it.
+  - Additionally you will also see how to select companies and set some Configurations.
+
+
+
 
 ### Javascript Samples
 
