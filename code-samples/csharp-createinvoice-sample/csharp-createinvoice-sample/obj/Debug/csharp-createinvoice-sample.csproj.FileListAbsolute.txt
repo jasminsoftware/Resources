@@ -1,0 +1,8 @@
+D:\PrjNET\JDN\Resources\code-samples\csharp-createinvoice-sample\csharp-createinvoice-sample\bin\Debug\CreateInvoice.exe.config
+D:\PrjNET\JDN\Resources\code-samples\csharp-createinvoice-sample\csharp-createinvoice-sample\bin\Debug\CreateInvoice.exe
+D:\PrjNET\JDN\Resources\code-samples\csharp-createinvoice-sample\csharp-createinvoice-sample\bin\Debug\CreateInvoice.pdb
+D:\PrjNET\JDN\Resources\code-samples\csharp-createinvoice-sample\csharp-createinvoice-sample\bin\Debug\Newtonsoft.Json.dll
+D:\PrjNET\JDN\Resources\code-samples\csharp-createinvoice-sample\csharp-createinvoice-sample\bin\Debug\Newtonsoft.Json.xml
+D:\PrjNET\JDN\Resources\code-samples\csharp-createinvoice-sample\csharp-createinvoice-sample\obj\Debug\csharp-createinvoice-sample.csproj.CoreCompileInputs.cache
+D:\PrjNET\JDN\Resources\code-samples\csharp-createinvoice-sample\csharp-createinvoice-sample\obj\Debug\CreateInvoice.exe
+D:\PrjNET\JDN\Resources\code-samples\csharp-createinvoice-sample\csharp-createinvoice-sample\obj\Debug\CreateInvoice.pdb

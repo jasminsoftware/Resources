@@ -69,29 +69,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\CustomersController.cs" />
-    <Compile Include="Controllers\LogisticsSetupsController.cs" />
-    <Compile Include="Controllers\SalesInvoicesController.cs" />
-    <Compile Include="Controllers\SalesItemsController.cs" />
-    <Compile Include="Resources\Customers\BaseCustomerResource.cs" />
-    <Compile Include="Resources\Customers\PartyTaxSchemaResource.cs" />
-    <Compile Include="Resources\SalesItems\BaseSalesItemResource.cs" />
-    <Compile Include="Resources\Companies\CompanyResource.cs" />
-    <Compile Include="Resources\Customers\CustomerResource.cs" />
-    <Compile Include="Resources\SalesItems\ItemTaxSchemaResource.cs" />
-    <Compile Include="Resources\SalesItems\PriceListResource.cs" />
-    <Compile Include="Resources\SalesInvoices\SalesInvoiceLineResource.cs" />
-    <Compile Include="Resources\SalesInvoices\SalesInvoiceResource.cs" />
-    <Compile Include="Resources\SalesItems\ItemResource.cs" />
-    <Compile Include="Resources\Customers\PartyResource.cs" />
-    <Compile Include="Resources\SalesItems\SalesItemPriceListLineResource.cs" />
-    <Compile Include="Resources\SalesItems\SalesItemResource.cs" />
-    <Compile Include="Enums\CustomersMenuOptions.cs" />
-    <Compile Include="Enums\SalesInvoicesMenuOptions.cs" />
-    <Compile Include="Enums\SalesItemsMenuOptions.cs" />
-    <Compile Include="Enums\SalesOrdersMenuOptions.cs" />
+    <Compile Include="Entities\CompanyResource.cs" />
     <Compile Include="Helpers\AuthenticationProvider.cs" />
-    <Compile Include="Controllers\CompaniesController.cs" />
+    <Compile Include="Controllers\Companies\CompaniesController.cs" />
     <Compile Include="Extensions\ClientExtensions.cs" />
     <Compile Include="Helpers\ConsoleHelper.cs" />
     <Compile Include="Constants\Constants.cs" />
@@ -100,10 +80,10 @@
     <Compile Include="Helpers\ListResponse.cs" />
     <Compile Include="Helpers\ODataResponse.cs" />
     <Compile Include="Helpers\SessionContext.cs" />
-    <Compile Include="Resources\SalesOrders\SalesOrderResource.cs" />
-    <Compile Include="Resources\SalesOrders\SalesOrderLineResource.cs" />
-    <Compile Include="Resources\Common\MoneyResource.cs" />
-    <Compile Include="Controllers\SalesOrdersController.cs" />
+    <Compile Include="Entities\OrderResource.cs" />
+    <Compile Include="Entities\OrderLineResource.cs" />
+    <Compile Include="Entities\PriceResource.cs" />
+    <Compile Include="Controllers\Order\OrdersController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -2,8 +2,12 @@
  This code sample is a command line application that illustrates the use of the Jasmin Web API to:
 
 * Authenticate using Client Credentials OAuth flow
-* Use of OData to get entities using sample filter
-* Create, Update and Delete different entity "types" (master, detail, base and extensions)
+* Use of OData to get orders using sample filter
+* Create a new sales order
+* Create a new line
+* Update a line quantity, 
+* Delete a line of that order 
+* Delete that same order.
 
 #### Getting Started
 
@@ -15,7 +19,7 @@ In order to be all to run tha sample you'll need to have :
 * Visual Studio 
 * Nuget
 * A clientid and clientsecret (registered application)
-* A JASMIN account and subscription (sample DEMO subscription will do).
+* A JASMIN account and subscription (sample subscription will do).
 
 #### Running the sample
 
@@ -79,84 +83,27 @@ Has you run the application it will perform the folowing steps:
 
 2. If you have multiple companies on your subscription (for this sample purpose only) we will select the first company using OData
 
-3. For simplification, we will set logistics settings to allow negative stock.
-
-4. The application menu will be displayed and you can start your integration test.
+3. The application menu will be displayed and you can start your integration test.
 ```
 
 #### Play along with your options
 
  The application menu will look something like this:
+
 ```
-1 - Customers
-2 - Sales Items
-3 - Sales Orders
-4 - Sales Invoices
+1 - List Orders - First page of 20
+2 - List Orders filtered using Odata
+3 - Create Sales Order
+4 - Get LastCreated Sales Order
+5 - Insert New Line on Sales Order
+6 - Add Quantity (+2) on Sales Order
+7 - Delete LastLine on Sales Order
+8 - Delete Last Sales Order
 
 0 - Exit
 ```
 
-If you press '1', the **Customer** submenu will display this options:
-```
-1 - Create Customer and Party (AllInOne)
-2 - Create Party and then Customer Extension
-3 - Get Last Created Customer
-4 - Update Last Customer City
-5 - Update Last Customer PaymentTerm
-6 - Delete Last Customer Extension
-7 - Add Customer Extension
-8 - Delete All Parties Created on Sample
+**TIP** - While you are testing, I would suggest to go from option 1 to 4, then play a bit with options 5, 6 and 7 (go back to option 4 as many times as you want to get a view of the progress of your actions) and then option 8 and 0 to exit.
 
-0 - Back to Main Menu
-
-```
-**TIP** - Go through all options (go back to option 3 whenever you want and see how the application handles) before returning to the main menu.
-
-If you press '2', the **Sales Items** submenu will display this options:
-```
-1 - Create Sales Item and Item (AllInOne)
-2 - Create Item and then Sales Item Extension
-3 - Get Last Sales Item Created
-4 - Set a Price
-5 - Update that Price
-6 - Delete Sales Item Extension
-7 - Add Sales Item Extension
-8 - Delete All Items Created on Sample
-
-0 - Back to Main Menu
-```
-**TIP** - Go through all options (go back to option 3 whenever you want and see how the application handles) before returning to the main menu.
-
-If you press '3', the **Sales Orders** SubMenu will look like this:
-```
-1 - List First page of 20
-2 - List filtered using Odata
-3 - Create Order
-4 - Get LastCreated Order
-5 - Insert New Line on Order
-6 - Add Quantity (+2) on Order
-7 - Delete LastLine on Order
-8 - Delete Last Order
-
-0 - Back To Main Menu
-```
-
-**TIP** - I would suggest you to go from option 1 to 4, then play a bit with options 5, 6 and 7 (go back to option 4 as many times as you want to get a view of the progress of your actions) and then option 8 and 0 to exit.
-
-If you press '4', the **Sales Invoices** submenu will display this options:
-```
-1 - List First page of 20
-2 - List filtered using Odata
-3 - Create Invoice
-4 - Get LastCreated Invoice
-5 - Delete Last Invoice
-
-0 - Back To Main Menu
-```
-
-**TIP** - Go through all options before returning to the main menu.
-
-*Have a great time and think about that great idea that will make you stand-up from the rest of the crowd!*
-
-This sample should help you quickly getting started on building your own JASMINE integration!
+*Have a great time and build you one awesome JASMIN integration!*
 

@@ -1,6 +1,6 @@
 ﻿namespace Jasmin.IntegrationSample
 {
-    internal class SessionContext
+    public class SessionContext
     {
         #region Constructors
 
@@ -55,32 +55,7 @@
         /// <summary>
         /// Gets or sets the order resource.
         /// </summary>
-        public SalesOrderResource OrderResource { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Invoice resource.
-        /// </summary>
-        public SalesInvoiceResource InvoiceResource { get; set; }
-
-        /// <summary>
-        /// Gets or sets the party key.
-        /// </summary>
-        public string PartyKey { get; set; }
-
-        /// <summary>
-        /// Gets or sets the deleted customer key.
-        /// </summary>
-        public string DeletedCustomerKey { get; set; }
-        
-        /// <summary>
-        /// Gets or sets the item key.
-        /// </summary>
-        public string ItemKey { get; set; }
-
-        /// <summary>
-        /// Gets or sets the deleted item key.
-        /// </summary>
-        public string DeletedItemKey { get; set; }
+        public OrderResource OrderResource { get; set; }
 
         #endregion
 
