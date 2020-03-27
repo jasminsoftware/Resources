@@ -761,7 +761,7 @@ namespace Jasmin.IntegrationSample
 
                     // build the odata expression
 
-                    string odataExpression = "?$select=TaxCodeItemGroupKey&$top=1&$filter=(TaxCodeItemGroupKey eq 'IVA-TN' or TaxCodeItemGroupKey eq 'NORMAL') and IsActive eq true and IsSystem eq false and IsDeleted eq false";
+                    string odataExpression = "?$select=TaxCodeItemGroupKey&$top=1&$filter=(TaxCodeItemGroupKey eq 'IVA-TN' or TaxCodeItemGroupKey eq 'NORMAL') and IsActive eq true and IsDeleted eq false";
 
                     // full request 
                     request = string.Concat(request, odataExpression);

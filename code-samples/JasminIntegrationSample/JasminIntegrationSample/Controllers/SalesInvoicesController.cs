@@ -60,7 +60,7 @@ namespace Jasmin.IntegrationSample
                 SalesInvoiceResource invoice = new SalesInvoiceResource()
                 {
                     Company = CompanyKey,
-                    DocumentType = "FS",
+                    DocumentType = "FA",
                     DocumentDate = DateTime.UtcNow,
                     Serie = DateTime.UtcNow.Year.ToString(),
                     Customer = "SOFRIO",
