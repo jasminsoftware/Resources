@@ -27,6 +27,12 @@ namespace Jasmin.IntegrationSample
             Console.ForegroundColor = color;
         }
 
+        internal static void WriteWaitingMessage()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Press any key to continue . . .");
+        }
+
         internal static SessionContext GetSessionArguments(string[] args)
         {
             SessionContext context = new SessionContext();
@@ -137,7 +143,7 @@ namespace Jasmin.IntegrationSample
 
             if (intOption == 0)
             {
-                WriteWaitingMessage();
+               WriteWaitingMessage();
                 Console.ReadKey();
             }
 
@@ -399,12 +405,6 @@ namespace Jasmin.IntegrationSample
             Console.WriteLine("After authentication validation a menu will be displayed with available options.");
             WriteWaitingMessage();
             Console.ReadKey();
-        }
-
-        private static void WriteWaitingMessage()
-        {
-            Console.WriteLine("");
-            Console.WriteLine("Press any key to continue . . .");
         }
 
         private static string GetArgument(string arg, string[] args)

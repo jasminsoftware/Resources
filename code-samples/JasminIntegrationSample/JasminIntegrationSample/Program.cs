@@ -26,25 +26,33 @@ namespace Jasmin.IntegrationSample
                 {
                     AuthenticationProvider authenticationProvider = new AuthenticationProvider(session.ClientId, session.ClientSecret);
 
-                    // For this sample purpose we will select tha company to use.
+                    // For this sample purpose we will select the company to use.
 
                     SetSessionCompanyKeyAsync(session, authenticationProvider).Wait();
 
-                    // For this sample purpose we will allow negative stock on this company.
-
-                    SetAllowNegativeStockAsync(session, authenticationProvider).Wait();
-
-                    // Display Main Menu
-
-                    MenuOptions option = MenuOptions.Exit;
-                    do
+                    if (!string.IsNullOrEmpty(session.CompanyKey))
                     {
-                        option = ConsoleHelper.GetMenuOption();
-                        if (option != MenuOptions.Exit)
+                        // For this sample purpose we will allow negative stock on this company.
+
+                        SetAllowNegativeStockAsync(session, authenticationProvider).Wait();
+
+                        // Display Main Menu
+
+                        MenuOptions option = MenuOptions.Exit;
+                        do
                         {
-                            HandleMainMenuOptionAsync(session, authenticationProvider, option).Wait();
-                        }
-                    } while (option != MenuOptions.Exit);
+                            option = ConsoleHelper.GetMenuOption();
+                            if (option != MenuOptions.Exit)
+                            {
+                                HandleMainMenuOptionAsync(session, authenticationProvider, option).Wait();
+                            }
+                        } while (option != MenuOptions.Exit);
+                    }
+                    else
+                    {
+                        ConsoleHelper.WriteWaitingMessage();
+                        Console.ReadKey();
+                    }
                 }
             }
             catch(Exception ex)
@@ -501,7 +509,15 @@ namespace Jasmin.IntegrationSample
 
             companyKey = await CompaniesController.GetCompanyKeyAsync();
             Console.WriteLine("");
-            Console.WriteLine(string.IsNullOrEmpty(companyKey) ? "Company not found. Please create the company first." : String.Format("Company found: {0}.", companyKey));
+            if (string.IsNullOrEmpty(companyKey))
+            {
+                ConsoleHelper.WriteErrorLine("Company not found. Please access to Jasmin and create a company first.");
+                Console.WriteLine("Exiting application.");
+            }
+            else
+            {
+                Console.WriteLine(String.Format("Company found: {0}.", companyKey));
+            }
 
             sessionContext.CompanyKey = companyKey;
         }
@@ -512,7 +528,7 @@ namespace Jasmin.IntegrationSample
             if (string.IsNullOrEmpty(sessionContext.CompanyKey))
             {
                 Console.WriteLine("");
-                Console.WriteLine("No company not found. Unable to Allow Negative Stock.");
+                Console.WriteLine("No company found. Unable to Allow Negative Stock.");
 
                 return;
             }

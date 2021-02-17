@@ -68,7 +68,7 @@ namespace Jasmin.IntegrationSample
 
                     // It's a GET
 
-                    HttpRequestMessage getOrderMessage = new HttpRequestMessage(HttpMethod.Get, resourceLocation);
+                    HttpRequestMessage getCompanyMessage = new HttpRequestMessage(HttpMethod.Get, resourceLocation);
 
                     // Log Request
 
@@ -77,7 +77,7 @@ namespace Jasmin.IntegrationSample
 
                     // Send
 
-                    using (HttpResponseMessage responseContent = await client.SendAsync(getOrderMessage))
+                    using (HttpResponseMessage responseContent = await client.SendAsync(getCompanyMessage))
                     {
                         // Get the response
 
@@ -95,10 +95,12 @@ namespace Jasmin.IntegrationSample
 
                         var objectResult = JsonConvert.DeserializeObject<ODataResponse<CompanyResource>>(json);
                         IList<CompanyResource> companies = objectResult.Items;
-                            
-                        companyKey = companies[0].CompanyKey;
 
-                        ConsoleHelper.WriteSuccessLine(String.Format("Company Key: {0}", companyKey));
+                        if (companies.Count > 0)
+                        {
+                            companyKey = companies[0].CompanyKey;
+                            ConsoleHelper.WriteSuccessLine(String.Format("Company Key: {0}", companyKey));
+                        }
                     }
                 }
             }
