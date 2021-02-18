@@ -14,8 +14,19 @@ All you need to do is run the project using Visual Studio 2017.
 In order to be all to run tha sample you'll need to have :
 * Visual Studio 
 * Nuget
-* A clientid and clientsecret (registered application)
-* A JASMIN account and subscription (sample DEMO subscription will do).
+* A Client Id and Client Secret (a registered application)
+* A JASMIN account and subscription (a sample DEMO subscription will do).
+* The registred application must be granted access to the subscription in use
+
+_Additional TIPs (for those using a Mac)_
+* By default VS for Mac uses Application Output panel to simulate the console. You should use an external console, to ensure proper key handling for this sample.
+
+    > To do that, open "Project Options", and go to "Run > Configurations > Default" and check the box before "Run on external console".
+
+* Make sure you Terminal colors are the right ones for you.
+
+    > You can change them using, "Terminal Menu > Preferences > Profiles" - we recomend you to select "Pro".
+
 
 #### Running the sample
 
