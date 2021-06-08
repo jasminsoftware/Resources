@@ -11,12 +11,13 @@ All you need to do is run the project using Visual Studio 2017.
 
 #### Prerequisites
 
-In order to be all to run tha sample you'll need to have :
+In order to be all to run the sample you'll need to have :
 * Visual Studio 
 * Nuget
 * A Client Id and Client Secret (a registered application)
-* A JASMIN account and subscription (a sample DEMO subscription will do).
+* A JASMIN account and subscription (a sample DEMO subscription will do)
 * The registred application must be granted access to the subscription in use
+* (Note: To access full sample capabilities, a company should already been created on the subscription in use)
 
 _Additional TIPs (for those using a Mac)_
 * By default VS for Mac uses Application Output panel to simulate the console. You should use an external console, to ensure proper key handling for this sample.
