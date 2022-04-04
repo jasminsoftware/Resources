@@ -1,7 +1,7 @@
 var request = require('request');
  
 request({
-  url: 'https://identity.primaverabss.com/core/connect/token',
+  url: 'https://identity.primaverabss.com/connect/token',
   method: 'POST',
   auth: {
     user: '<CLIENT_ID>', // TODO : put your application client id here

@@ -2,7 +2,7 @@
 function doLogin() {
 
     var CLIENT_ID = 'your_client_id';
-    var AUTHORIZATION_ENDPOINT = 'https://identity.primaverabss.com/core/connect/authorize';
+    var AUTHORIZATION_ENDPOINT = 'https://identity.primaverabss.com/connect/authorize';
     var CALLBACK_ENDPOINT = 'your_callback_endpoint'
 
     try {

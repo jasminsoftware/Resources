@@ -32,12 +32,12 @@ export class LoginService {
         let identityServerUrl = this.settingsService.identityServerUri;
 
         // oauth config
-        this.oAuthService.loginUrl = identityServerUrl + "/core/connect/authorize";
+        this.oAuthService.loginUrl = identityServerUrl + "/connect/authorize";
         this.oAuthService.redirectUri = this.settingsService.identityRedirectUri;
         this.oAuthService.clientId = this.settingsService.identityServerClientId;
         this.oAuthService.scope = this.settingsService.identityServerScope;
-        this.oAuthService.issuer = identityServerUrl + "/core";
-        this.oAuthService.logoutUrl = identityServerUrl + "/core/connect/endsession?id_token_hint={{id_token}}&post_logout_redirect_uri=" + this.settingsService.identityLogoutUri;
+        this.oAuthService.issuer = identityServerUrl;
+        this.oAuthService.logoutUrl = identityServerUrl + "/connect/endsession?id_token_hint={{id_token}}&post_logout_redirect_uri=" + this.settingsService.identityLogoutUri;
 
         this.oAuthService.setStorage(sessionStorage);
         this.oAuthService.oidc = true;
